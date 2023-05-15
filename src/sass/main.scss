@@ -1,0 +1,16 @@
+@forward './base/reset';
+@forward './base/typography';
+
+@forward './layouts/footer';
+@forward './layouts/header';
+
+@forward './sections/about';
+@forward './sections/experience';
+@forward './sections/introduction';
+@forward './sections/projects';
+@forward './sections/reach-out';
+@forward './sections/reputation';
+@forward './sections/services';
+@forward './sections/consultation';
+
+@use './utils/variables' as *;

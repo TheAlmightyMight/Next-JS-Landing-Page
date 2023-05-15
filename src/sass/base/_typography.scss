@@ -1,0 +1,96 @@
+@use '../utils/variables' as *;
+
+.common {
+	font-family: 'Work Sans';
+	font-style: normal;
+}
+
+.heading {
+	color: $color-800;
+	@extend .common;
+
+	&__1 {
+		@extend .heading;
+
+		font-weight: 600;
+		font-size: 72px;
+		line-height: 84px;
+	}
+
+	&__2 {
+		@extend .heading;
+
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 70px;
+	}
+
+	&__3 {
+		@extend .heading;
+
+		font-weight: 600;
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	&__4 {
+		@extend .heading;
+
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 42px;
+	}
+
+	&__5 {
+		@extend .heading;
+
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 35px;
+	}
+}
+
+.body {
+	font-family: 'Work Sans';
+	font-style: normal;
+
+	&__medium {
+		@extend .body;
+
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 23px;
+	}
+
+	&__large {
+		@extend .body;
+
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	&__default {
+		@extend .body;
+
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+	}
+}
+
+.subtitle {
+	@extend .common;
+
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 23px;
+}
+
+.caption {
+	@extend .common;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+}
