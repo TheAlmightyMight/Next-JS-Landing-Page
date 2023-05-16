@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../sass/components/_Buttons.scss'
+// import
 
 interface Props {
 	type: 'left' | 'right'
