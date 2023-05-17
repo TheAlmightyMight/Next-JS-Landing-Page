@@ -3,6 +3,9 @@
 .header {
 	height: 80px;
 	padding: 1rem 2rem;
+
+	position: fixed;
+	inset: 0;
 }
 
 .header__wrapper {
@@ -10,8 +13,7 @@
 	align-items: center;
 	justify-content: space-between;
 	margin: auto;
-
-	max-width: 1200px; // 825px
+	max-width: 1200px;
 }
 
 .header__nav {
@@ -46,8 +48,10 @@
 	margin-right: 0;
 }
 
-// .burger-btn {
-// }
-
-// .burger-btn.is-active {
-// }
+.header__btn {
+	@media (min-width: 825px) {
+		& {
+			display: none;
+		}
+	}
+}
