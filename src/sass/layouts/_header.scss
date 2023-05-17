@@ -1,7 +1,53 @@
 @use '../utils/variables' as *;
 
-.burger-btn {
+.header {
+	height: 80px;
+	padding: 1rem 2rem;
 }
 
-.burger-btn.is-active {
+.header__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: auto;
+
+	max-width: 1200px; // 825px
 }
+
+.header__nav {
+	display: flex;
+}
+
+.header__nav-list {
+	display: flex;
+	align-items: center;
+	height: 100%;
+
+	@media (max-width: 825px) {
+		& {
+			flex-direction: column;
+			display: none;
+		}
+	}
+}
+
+.header__nav-list > li {
+	margin-right: 50px;
+	cursor: pointer;
+	color: inherit;
+
+	&:hover {
+		color: $color-secondary;
+		transition: color 0.5s;
+	}
+}
+
+.header__nav-list > li:last-of-type {
+	margin-right: 0;
+}
+
+// .burger-btn {
+// }
+
+// .burger-btn.is-active {
+// }

@@ -1,0 +1,8 @@
+.TheBoxIcon {
+	display: flex;
+	align-items: center;
+
+	& > svg:first-of-type {
+		margin-right: 15px;
+	}
+}
