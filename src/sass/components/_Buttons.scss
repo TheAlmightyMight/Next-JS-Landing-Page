@@ -1,0 +1,30 @@
+@use '../utils/variables' as *;
+@use '../base/typography' as *;
+
+.SliderButton {
+	background: $color-800;
+	color: $color-100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--normal {
+		@extend .SliderButton;
+
+		width: 208px;
+		height: 40px;
+	}
+
+	&--large {
+		@extend .SliderButton;
+
+		width: 295px;
+		height: 65px;
+	}
+
+	&__text {
+		@extend .body--default;
+
+		margin-left: 10px;
+	}
+}

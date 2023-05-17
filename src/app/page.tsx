@@ -8,14 +8,9 @@ import { ElectricIcon } from '@/components/icons/ElectricIcon'
 export default function Home() {
 	return (
 		<main>
-			{/* <Introduction />
-			<Button
-				type='right'
-				size='large'
-			/>
-			<p>hello</p> */}
+			<Introduction />
 
-			<ElectricIcon />
+
 		</main>
 	)
 }

@@ -1,15 +1,14 @@
 @use '../utils/variables' as *;
 
 .common {
-	font-family: 'Work Sans';
-	font-style: normal;
+	font-family: inherit;
 }
 
 .heading {
 	color: $color-800;
 	@extend .common;
 
-	&__1 {
+	&--1 {
 		@extend .heading;
 
 		font-weight: 600;
@@ -17,7 +16,7 @@
 		line-height: 84px;
 	}
 
-	&__2 {
+	&--2 {
 		@extend .heading;
 
 		font-weight: 700;
@@ -25,7 +24,7 @@
 		line-height: 70px;
 	}
 
-	&__3 {
+	&--3 {
 		@extend .heading;
 
 		font-weight: 600;
@@ -33,7 +32,7 @@
 		line-height: 56px;
 	}
 
-	&__4 {
+	&--4 {
 		@extend .heading;
 
 		font-weight: 700;
@@ -41,7 +40,7 @@
 		line-height: 42px;
 	}
 
-	&__5 {
+	&--5 {
 		@extend .heading;
 
 		font-weight: 500;
@@ -51,10 +50,9 @@
 }
 
 .body {
-	font-family: 'Work Sans';
-	font-style: normal;
+	@extend .common;
 
-	&__medium {
+	&--medium {
 		@extend .body;
 
 		font-weight: 400;
@@ -62,7 +60,7 @@
 		line-height: 23px;
 	}
 
-	&__large {
+	&--large {
 		@extend .body;
 
 		font-weight: 400;
@@ -70,7 +68,7 @@
 		line-height: 28px;
 	}
 
-	&__default {
+	&--default {
 		@extend .body;
 
 		font-weight: 400;

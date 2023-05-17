@@ -13,4 +13,6 @@
 @forward './sections/services';
 @forward './sections/consultation';
 
+@forward './components/Buttons';
+
 @use './utils/variables' as *;
