@@ -5,11 +5,10 @@ interface Props {
 }
 export const NavList: React.FC<Props> = ({ isMobile }) => {
 	return (
-		<nav
-			style={{ display: isMobile ? 'block' : '' }}
-			className='header__nav'
-		>
-			<ul className='header__nav-list'>
+		<nav className={isMobile ? 'header__nav--mobile' : 'header__nav'}>
+			<ul
+				className={isMobile ? 'header__nav-list--mobile' : 'header__nav-list'}
+			>
 				<li>
 					<a href='#Home'>Home</a>
 				</li>

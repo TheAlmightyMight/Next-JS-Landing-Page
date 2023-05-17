@@ -14,7 +14,6 @@ export const Header: React.FC = () => {
 		<header className='header'>
 			<div className='header__wrapper'>
 				<TheBoxIcon />
-				<NavList isMobile={false} />
 
 				{isOpen ? (
 					<>
@@ -27,12 +26,15 @@ export const Header: React.FC = () => {
 						<MobileMenu />
 					</>
 				) : (
-					<button
-						className='header__btn'
-						onClick={() => setIsOpen(true)}
-					>
-						<BurgerIcon />
-					</button>
+					<>
+						<NavList isMobile={false} />
+						<button
+							className='header__btn'
+							onClick={() => setIsOpen(true)}
+						>
+							<BurgerIcon />
+						</button>
+					</>
 				)}
 			</div>
 		</header>

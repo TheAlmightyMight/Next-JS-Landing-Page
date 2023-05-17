@@ -1,11 +1,15 @@
 @use '../utils/variables' as *;
+@use '../base/typography' as *;
 
 .header {
 	height: 80px;
 	padding: 1rem 2rem;
 
 	position: fixed;
+	z-index: 5;
 	inset: 0;
+
+	background-color: $color-white;
 }
 
 .header__wrapper {
@@ -27,7 +31,6 @@
 
 	@media (max-width: 825px) {
 		& {
-			flex-direction: column;
 			display: none;
 		}
 	}
@@ -53,5 +56,50 @@
 		& {
 			display: none;
 		}
+	}
+}
+
+/* Mobile */
+
+.header__mobile-menu {
+	position: fixed;
+	z-index: 2;
+	inset: 0;
+
+	margin-top: 80px;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+
+	background-color: $color-white;
+}
+
+.header__nav--mobile {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: flex-start;
+
+	height: 100%;
+	width: fit-content;
+}
+
+.header__nav-list--mobile {
+	text-align: center;
+	margin-top: 120px;
+
+	& > li {
+		margin-bottom: 1.5rem;
+	}
+
+	& > li:last-of-type {
+		margin-bottom: 0;
+	}
+
+	& > li > a {
+		@extend .body--default;
+
+		font-size: 2rem;
 	}
 }
