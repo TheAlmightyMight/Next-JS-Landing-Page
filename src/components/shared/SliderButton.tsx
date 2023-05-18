@@ -6,10 +6,12 @@ import { ArrowRightIcon } from '../icons/ArrowRight'
 interface Props {
 	type: 'left' | 'right'
 	size: 'normal' | 'large'
+	clickHandler: (...args: any) => void
 }
-export const SliderButton: React.FC<Props> = ({ type, size }) => {
+export const SliderButton: React.FC<Props> = ({ type, size, clickHandler }) => {
 	return (
 		<button
+			onClick={clickHandler}
 			className={
 				size === 'normal' ? 'SliderButton--normal' : 'SliderButton--large'
 			}

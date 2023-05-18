@@ -1,29 +1,26 @@
 import React from 'react'
 
+import { SliderImage } from '@/constants'
+
 import Image from 'next/image'
 
-interface ImageElement {
-	src: string
-	blurDataURL: string
-}
-
 interface Props {
-	urls: ImageElement[]
+	items: SliderImage[]
 }
-export const Slider: React.FC<Props> = ({ urls }) => {
+export const Slider: React.FC<SliderImage> = ({
+	image: { src, blurDataURL },
+}) => {
 	return (
 		<>
-			{urls.map((el, i) => (
-				<Image
-					placeholder='blur'
-					blurDataURL={el.blurDataURL}
-					priority={i === 0 ? true : undefined}
-					src={el.src}
-					alt='Slider image'
-					fill={true}
-					key={el.src}
-				/>
-			))}
+			<Image
+				placeholder='blur'
+				blurDataURL={blurDataURL}
+				priority={true}
+				src={src}
+				alt='Slider image'
+				fill={true}
+				key={src}
+			/>
 		</>
 	)
 }

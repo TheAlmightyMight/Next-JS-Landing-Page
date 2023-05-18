@@ -1,28 +1,41 @@
-import React from 'react'
-
-import Project1 from '../../../assets/other/Project-1.jpg'
-import Project2 from '../../../assets/other/Project-2.jpg'
-import Project3 from '../../../assets/other/Project-3.jpg'
+'use client'
+import React, { useState } from 'react'
 
 import { Heading } from './Heading'
 import { Slider } from './Slider'
 import { SliderControls } from './SliderControls'
 
+import { SliderImages } from '@/constants'
+
 export const Introduction: React.FC = () => {
+	const [currentItem, setCurrentItem] = useState(0)
+
+	const goForward = () => {
+		if (currentItem + 1 === 12) {
+			return setCurrentItem(0)
+		}
+
+		setCurrentItem(prev => prev + 1)
+	}
+
+	const goBackwards = () => {
+		if (currentItem - 1 === -1) {
+			return setCurrentItem(SliderImages.length - 1)
+		}
+
+		setCurrentItem(prev => prev - 1)
+	}
+
 	return (
 		<section className='introduction'>
 			<div className='introduction__wrapper'>
 				<Heading />
-				<Slider
-					urls={[
-						{ src: Project1.src, blurDataURL: Project1.blurDataURL as string },
-
-						{ src: Project2.src, blurDataURL: Project2.blurDataURL as string },
-
-						{ src: Project3.src, blurDataURL: Project3.blurDataURL as string },
-					]}
+				<Slider {...SliderImages[currentItem]} />
+				<SliderControls
+					nextHandler={goForward}
+					backHandler={goBackwards}
+					{...SliderImages[currentItem]}
 				/>
-				<SliderControls />
 			</div>
 		</section>
 	)
