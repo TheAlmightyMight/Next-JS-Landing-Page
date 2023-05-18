@@ -7,7 +7,7 @@ interface Props {
 	type: 'left' | 'right'
 	size: 'normal' | 'large'
 }
-export const Button: React.FC<Props> = ({ type, size }) => {
+export const SliderButton: React.FC<Props> = ({ type, size }) => {
 	return (
 		<button
 			className={

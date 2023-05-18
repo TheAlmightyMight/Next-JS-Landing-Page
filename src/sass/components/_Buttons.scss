@@ -3,7 +3,7 @@
 
 .SliderButton {
 	background: $color-800;
-	color: $color-100;
+	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -24,7 +24,13 @@
 
 	&__text {
 		@include body('default');
+		color: $color-100;
 
 		margin-left: 10px;
+	}
+
+	&:hover {
+		filter: brightness(135%);
+		transition: filter 0.3s ease-in;
 	}
 }

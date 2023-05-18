@@ -12,7 +12,7 @@ interface Props {
 }
 export const Slider: React.FC<Props> = ({ urls }) => {
 	return (
-		<div className='introduction__track'>
+		<>
 			{urls.map((el, i) => (
 				<Image
 					placeholder='blur'
@@ -24,6 +24,6 @@ export const Slider: React.FC<Props> = ({ urls }) => {
 					key={el.src}
 				/>
 			))}
-		</div>
+		</>
 	)
 }
