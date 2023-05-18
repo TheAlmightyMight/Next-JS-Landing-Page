@@ -73,6 +73,17 @@
 	justify-content: center;
 
 	background-color: $color-white;
+
+	animation: 0.5s ease-in hoist;
+
+	@keyframes hoist {
+		from {
+			transform: translateX(-100%);
+		}
+		to {
+			transform: translateX(0%);
+		}
+	}
 }
 
 .header__nav--mobile {
@@ -98,7 +109,7 @@
 	}
 
 	& > li > a {
-		@extend .body--default;
+		@include body('default');
 
 		font-size: 2rem;
 	}

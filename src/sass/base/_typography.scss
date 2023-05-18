@@ -1,84 +1,57 @@
 @use '../utils/variables' as *;
 
-.common {
-	font-family: inherit;
-}
-
-.heading {
+@mixin heading($level) {
 	color: $color-800;
-	@extend .common;
+	font-family: inherit;
 
-	&--1 {
-		@extend .heading;
-
+	@if $level == 1 {
 		font-weight: 600;
 		font-size: 72px;
 		line-height: 84px;
-	}
-
-	&--2 {
-		@extend .heading;
-
+	} @else if $level == 2 {
 		font-weight: 700;
 		font-size: 60px;
 		line-height: 70px;
-	}
-
-	&--3 {
-		@extend .heading;
-
+	} @else if $level == 3 {
 		font-weight: 600;
 		font-size: 48px;
 		line-height: 56px;
-	}
-
-	&--4 {
-		@extend .heading;
-
+	} @else if $level == 4 {
 		font-weight: 700;
 		font-size: 36px;
 		line-height: 42px;
-	}
-
-	&--5 {
-		@extend .heading;
-
+	} @else if $level == 5 {
 		font-weight: 500;
 		font-size: 30px;
 		line-height: 35px;
+	} @else {
+		@error "Wrong heading level #{$level}.";
 	}
 }
 
-.body {
-	@extend .common;
+@mixin body($type) {
+	color: $color-800;
+	font-family: inherit;
 
-	&--medium {
-		@extend .body;
-
+	@if $type == 'medium' {
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 23px;
-	}
-
-	&--large {
-		@extend .body;
-
+	} @else if $type == 'large' {
 		font-weight: 400;
 		font-size: 24px;
 		line-height: 28px;
-	}
-
-	&--default {
-		@extend .body;
-
+	} @else if $type == 'default' {
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 21px;
+	} @else {
+		@error "Wrong body type #{$type}.";
 	}
 }
 
 .subtitle {
-	@extend .common;
+	font-family: inherit;
 
 	font-weight: 500;
 	font-size: 20px;
@@ -86,7 +59,7 @@
 }
 
 .caption {
-	@extend .common;
+	font-family: inherit;
 
 	font-weight: 400;
 	font-size: 16px;
