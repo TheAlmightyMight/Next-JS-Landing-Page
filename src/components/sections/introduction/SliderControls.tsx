@@ -24,14 +24,14 @@ export const SliderControls: React.FC<Props> = ({
 
 			<div className='introduction__slider-controls-btn-wrapper'>
 				<SliderButton
-					clickHandler={nextHandler}
-					size='normal'
-					type='right'
-				/>
-				<SliderButton
 					clickHandler={backHandler}
 					size='normal'
 					type='left'
+				/>
+				<SliderButton
+					clickHandler={nextHandler}
+					size='normal'
+					type='right'
 				/>
 			</div>
 		</div>
