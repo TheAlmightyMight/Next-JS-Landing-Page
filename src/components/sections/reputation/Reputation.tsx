@@ -3,7 +3,8 @@ import React from 'react'
 import { ReputationItem } from './ReputationItem'
 
 import { ServicesIcon } from '@/components/icons/ServicesIcon'
-import { RepairIcon } from '@/components/icons/RepairIcon'
+import { TeamsIcon } from '@/components/icons/TeamsIcon'
+import { DesignsIcon } from '@/components/icons/DesignsIcon'
 
 const reputationItems = [
 	{
@@ -14,18 +15,18 @@ const reputationItems = [
 	{
 		heading: 'Best teams',
 		info: 'Cursus semper tellus volutpat aliquet lacus. ',
-		icon: <ServicesIcon />,
+		icon: <TeamsIcon />,
 	},
 	{
 		heading: 'Best designs',
 		info: 'Ultricies at ipsum nunc, tristique nam lectus.',
-		icon: <RepairIcon />,
+		icon: <DesignsIcon />,
 	},
 ]
 
 export const Reputation: React.FC = () => {
 	return (
-		<section>
+		<section className='reputation'>
 			<h1 className='introduction__heading'>Our reputation</h1>
 
 			<div className='reputation__items'>
