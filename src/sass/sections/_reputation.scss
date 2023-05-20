@@ -1,16 +1,43 @@
+@use '../utils/variables' as *;
+@use '../base/typography' as *;
+
 .reputation {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 .introduction__heading {
+	margin: 3rem 0;
+
+	@include heading(4);
 }
 .reputation__items {
+	@media (min-width: 1050px) {
+		display: flex;
+		gap: 30px;
+	}
 }
 .reputation__item {
+	width: 300px; // 290 290 290
+
+	border: 1.5px solid $color-100;
+	border-radius: 5px;
+
+	padding: 20px;
+	margin-bottom: 1rem;
+
+	&:last-of-type {
+		margin: 0;
+	}
 }
 .introduction__icon {
+	margin-bottom: 18px;
 }
 .reputation__item-heading {
+	font-weight: 700;
+	font-size: 20px;
+	margin-bottom: 18px;
 }
 .introduction__info {
+	@extend .caption;
 }
