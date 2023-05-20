@@ -32,30 +32,28 @@
 
 	@media (min-width: 300px) {
 		@include heading(5);
-		color: $color-50;
+		color: $color-800;
 	}
 
 	@media (min-width: 500px) {
 		@include heading(4);
-		color: $color-50;
+		color: $color-800;
 	}
 
 	@media (min-width: 700px) {
 		@include heading(3);
-		color: $color-50;
+		color: $color-800;
 	}
 
 	@media (min-width: 900px) {
 		@include heading(2);
-		color: $color-50;
+		color: $color-800;
 	}
 
 	@media (min-width: 1124px) {
 		@include heading(1);
-		color: $color-50;
+		color: $color-800;
 	}
-
-	color: $color-50;
 }
 
 .introduction__slider-controls {
@@ -63,8 +61,7 @@
 	z-index: 1;
 	bottom: 0;
 	right: 0;
-	max-width: 415px;
-
+	width: 415px;
 	background-color: $color-primary;
 }
 
@@ -72,7 +69,6 @@
 	font-style: normal;
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 23px;
 	text-align: center;
 	margin: 20px 0;
 
@@ -87,8 +83,9 @@
 	line-height: 23px;
 	text-align: center;
 	margin-bottom: 26px;
-	@include body('large');
+	padding: 0 8px;
 
+	@include body('large');
 	color: $color-50;
 }
 
@@ -119,5 +116,26 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@media (max-width: 500px) {
+	.introduction__slider-controls-paragraph {
+		margin-bottom: 8px;
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 8px;
+	}
+
+	.introduction__slider-controls-heading {
+		margin: 8px 0;
+		font-weight: 500;
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 700px) {
+	.introduction__slider-controls {
+		width: 310px;
 	}
 }

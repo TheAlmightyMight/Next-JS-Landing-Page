@@ -21,7 +21,7 @@ export interface SliderImage {
 
 export const SliderImages: SliderImage[] = [
 	{
-		image: Project1,
+		image: Project3,
 		projectName: 'Aurora Rise Project',
 		address: '501 S Cherry St, Denver, CO 80246',
 	},
@@ -31,7 +31,7 @@ export const SliderImages: SliderImage[] = [
 		address: '547 Seabright Ave, Santa Cruz, CA 95062',
 	},
 	{
-		image: Project3,
+		image: Project1,
 		projectName: 'Ironwood Heights Project',
 		address: '1200 Alamo Dr, Vacaville, CA 95687',
 	},
