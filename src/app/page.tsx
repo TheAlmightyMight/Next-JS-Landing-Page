@@ -3,6 +3,7 @@ import { Reputation } from '@/components/sections/reputation/Reputation'
 import { About } from '@/components/sections/about/About'
 import { Services } from '@/components/sections/services/Services'
 import { Experience } from '@/components/sections/experience/Experience'
+import { Consultation } from '@/components/sections/consultation/Consultation'
 
 export default function Home() {
 	return (
@@ -12,6 +13,7 @@ export default function Home() {
 			{/* <About /> */}
 			<Services />
 			<Experience />
+			<Consultation />
 		</main>
 	)
 }
