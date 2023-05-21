@@ -10,6 +10,7 @@
 	margin: 3rem 0;
 
 	@include heading(4);
+	color: $color-700;
 }
 .reputation__items {
 	@media (min-width: 1050px) {
@@ -18,17 +19,13 @@
 	}
 }
 .reputation__item {
-	width: 300px; // 290 290 290
+	width: 300px;
 
 	border: 1.5px solid $color-100;
 	border-radius: 5px;
 
 	padding: 20px;
 	margin-bottom: 1rem;
-
-	&:last-of-type {
-		margin: 0;
-	}
 }
 .introduction__icon {
 	margin-bottom: 18px;
@@ -37,6 +34,7 @@
 	font-weight: 700;
 	font-size: 20px;
 	margin-bottom: 18px;
+	color: $color-700;
 }
 .introduction__info {
 	@extend .caption;
