@@ -27,7 +27,7 @@ const reputationItems = [
 export const Reputation: React.FC = () => {
 	return (
 		<section className='reputation'>
-			<h2 className='introduction__heading'>Our reputation</h2>
+			<h2 className='reputation__heading'>Our reputation</h2>
 
 			<div className='reputation__items'>
 				{reputationItems.map(el => (
