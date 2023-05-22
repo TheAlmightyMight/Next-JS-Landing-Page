@@ -1,4 +1,4 @@
-export const ArrowRightIcon: React.FC = () => {
+export const Twitter: React.FC = () => {
 	return (
 		<svg
 			width='40'
