@@ -4,16 +4,18 @@ import { About } from '@/components/sections/about/About'
 import { Services } from '@/components/sections/services/Services'
 import { Experience } from '@/components/sections/experience/Experience'
 import { Consultation } from '@/components/sections/consultation/Consultation'
+import { ReachOut } from '@/components/sections/reach-out/ReachOut'
 
 export default function Home() {
 	return (
 		<main>
 			<Introduction />
 			<Reputation />
-			<About />
+			{/* <About /> */}
 			<Services />
 			{/* <Experience /> */}
 			<Consultation />
+			<ReachOut />
 		</main>
 	)
 }
