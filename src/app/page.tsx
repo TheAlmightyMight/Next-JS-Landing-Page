@@ -5,6 +5,7 @@ import { Services } from '@/components/sections/services/Services'
 import { Experience } from '@/components/sections/experience/Experience'
 import { Consultation } from '@/components/sections/consultation/Consultation'
 import { ReachOut } from '@/components/sections/reach-out/ReachOut'
+import { Projects } from '@/components/sections/projects/Projects'
 
 export default function Home() {
 	return (
@@ -15,6 +16,7 @@ export default function Home() {
 			<Services />
 			{/* <Experience /> */}
 			<Consultation />
+			<Projects />
 			<ReachOut />
 		</main>
 	)

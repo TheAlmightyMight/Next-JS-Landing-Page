@@ -1,0 +1,79 @@
+@use '../base/typography' as *;
+@use '../utils/variables' as *;
+
+.projects {
+}
+.projects__wrapper {
+	margin: auto;
+	max-width: 1440px;
+	padding: 80px 110px 120px 110px;
+}
+.projects__slider-controls {
+	max-width: 162px;
+}
+.projects__slider-controls-heading {
+	@include heading(4);
+}
+.projects__slider-tabs {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: -16px;
+		top: -4px;
+
+		width: 5px;
+		height: 28px;
+		background-color: $color-primary;
+	}
+}
+.projects__slider-tabs-tab {
+	font-weight: 500;
+	font-size: 24px;
+	color: $color-300;
+	margin-bottom: 20px;
+
+	cursor: pointer;
+
+	&:first-of-type {
+		margin-top: 40px;
+	}
+
+	&:last-of-type {
+		margin: 0;
+	}
+
+	&:hover {
+		color: $color-primary;
+	}
+}
+.projects__slider-tabs--active-tab-all {
+	color: $color-primary;
+	&::before {
+		transition: top 0.5s ease-in-out;
+		top: -4px;
+	}
+}
+.projects__slider-tabs--active-tab-commercial {
+	color: $color-primary;
+	&::before {
+		transition: top 0.5s ease-in-out;
+		top: 40px;
+	}
+}
+.projects__slider-tabs--active-tab-residential {
+	color: $color-primary;
+	&::before {
+		transition: top 0.5s ease-in-out;
+		top: 85px;
+	}
+}
+.projects__slider-tabs--active-tab-other {
+	color: $color-primary;
+	&::before {
+		transition: top 0.5s ease-in-out;
+		top: 130px;
+	}
+}
+.projects__slider {
+}
