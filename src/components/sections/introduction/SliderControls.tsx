@@ -27,11 +27,13 @@ export const SliderControls: React.FC<Props> = ({
 					clickHandler={backHandler}
 					size='normal'
 					type='left'
+					noText
 				/>
 				<SliderButton
 					clickHandler={nextHandler}
 					size='normal'
 					type='right'
+					noText
 				/>
 			</div>
 		</div>
