@@ -1,4 +1,4 @@
-@use '../utils/variables' as *;
+@use './variables' as *;
 
 @mixin heading($level) {
 	color: $color-800;

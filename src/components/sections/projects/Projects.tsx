@@ -9,7 +9,7 @@ const ITEMS_PER_PAGE = 4
 type TabCategory = 'all' | 'other' | 'commercial' | 'residential'
 
 export const Projects: React.FC = () => {
-	const [activeTab, setActiveTab] = useState<TabCategory>('commercial')
+	const [activeTab, setActiveTab] = useState<TabCategory>('all')
 	const [sliderItems, setSliderItems] = useState<SliderImage[]>(SliderImages)
 	const [page, setPage] = useState(0)
 
@@ -30,21 +30,25 @@ export const Projects: React.FC = () => {
 			case 'Residential': {
 				setActiveTab('residential')
 				setSliderItems(SliderImages.filter(el => el.cat === 'residential'))
+				setPage(0)
 				break
 			}
 			case 'Commercial': {
 				setActiveTab('commercial')
 				setSliderItems(SliderImages.filter(el => el.cat === 'commercial'))
+				setPage(0)
 				break
 			}
 			case 'Other': {
 				setActiveTab('other')
 				setSliderItems(SliderImages.filter(el => el.cat === 'other'))
+				setPage(0)
 				break
 			}
 			default: {
 				setActiveTab('all')
 				setSliderItems(SliderImages)
+				setPage(0)
 			}
 		}
 	}
@@ -66,7 +70,10 @@ export const Projects: React.FC = () => {
 	}
 
 	return (
-		<section className='projects'>
+		<section
+			id='Projects'
+			className='projects'
+		>
 			<div className='projects__wrapper'>
 				<div className='projects__slider-controls'>
 					<h4 className='projects__slider-controls-heading'>Projects</h4>

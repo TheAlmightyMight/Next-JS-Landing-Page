@@ -2,7 +2,10 @@ import React from 'react'
 
 export const ReachOut: React.FC = () => {
 	return (
-		<section className='contacts'>
+		<section
+			id='Contact'
+			className='contacts'
+		>
 			<div className='contacts__wrapper'>
 				<form className='contacts__form'>
 					<fieldset className='contacts__form-wrapper'>

@@ -1,6 +1,5 @@
 @use '../base/typography' as *;
-@use '../utils/variables' as *;
-
+@use '../base/variables' as *;
 .about {
 	margin-top: 50px;
 	display: flex;

@@ -20,7 +20,10 @@ const data = [
 
 export const Services: React.FC = () => {
 	return (
-		<section className='services'>
+		<section
+			id='Services'
+			className='services'
+		>
 			<div className='services__wrapper'>
 				<h3 className='services__heading'>Services</h3>
 

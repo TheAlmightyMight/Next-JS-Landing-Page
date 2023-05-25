@@ -1,12 +1,18 @@
 @use '../base/typography' as *;
-@use '../utils/variables' as *;
+@use '../base/variables' as *;
+@use 'sass:map';
 
-.projects {
-}
+$tabValues: (
+	'all': -4px,
+	'commercial': 45px,
+	'residential': 85px,
+	'other': 130px,
+);
+
 .projects__wrapper {
 	margin: auto;
 	max-width: 1440px;
-	padding: 80px 110px 120px 110px;
+	padding: 80px 110px 0 110px;
 
 	display: flex;
 
@@ -67,34 +73,16 @@
 		color: $color-primary;
 	}
 }
-.projects__slider-tabs--active-tab-all {
-	color: $color-primary;
-	&::before {
-		transition: top 0.5s ease-in-out;
-		top: -4px;
+
+@each $key, $val in $tabValues {
+	.projects__slider-tabs--active-tab-#{$key} {
+		&::before {
+			transition: top 0.5s ease-in-out;
+			top: map-get($tabValues, $key);
+		}
 	}
 }
-.projects__slider-tabs--active-tab-commercial {
-	color: $color-primary;
-	&::before {
-		transition: top 0.5s ease-in-out;
-		top: 40px;
-	}
-}
-.projects__slider-tabs--active-tab-residential {
-	color: $color-primary;
-	&::before {
-		transition: top 0.5s ease-in-out;
-		top: 85px;
-	}
-}
-.projects__slider-tabs--active-tab-other {
-	color: $color-primary;
-	&::before {
-		transition: top 0.5s ease-in-out;
-		top: 130px;
-	}
-}
+
 .projects__slider {
 	max-width: 680px;
 	margin-left: auto;
@@ -108,6 +96,10 @@
 	@media (max-width: 1120px) {
 		grid-template-columns: minmax(300px, 1fr);
 		grid-auto-rows: 384px;
+	}
+
+	& .projects__slider-pagination {
+		grid-row: 100px;
 	}
 }
 .projects__slider-item {

@@ -1,6 +1,5 @@
 @use '../base/typography' as *;
-@use '../utils/variables' as *;
-
+@use '../base/variables' as *;
 .consultation__wrapper {
 	position: relative;
 	max-width: 1440px;

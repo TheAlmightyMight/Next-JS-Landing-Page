@@ -12,9 +12,9 @@ export default function Home() {
 		<main>
 			<Introduction />
 			<Reputation />
-			{/* <About /> */}
+			<About />
 			<Services />
-			{/* <Experience /> */}
+			<Experience />
 			<Consultation />
 			<Projects />
 			<ReachOut />

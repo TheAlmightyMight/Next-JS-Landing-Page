@@ -26,7 +26,10 @@ const reputationItems = [
 
 export const Reputation: React.FC = () => {
 	return (
-		<section className='reputation'>
+		<section
+			id=''
+			className='reputation'
+		>
 			<h2 className='reputation__heading'>Our reputation</h2>
 
 			<div className='reputation__items'>

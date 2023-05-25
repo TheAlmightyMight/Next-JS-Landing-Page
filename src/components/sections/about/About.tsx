@@ -8,7 +8,10 @@ import ImageData from '../../../assets/other/OldMan.jpg'
 export const About: React.FC = () => {
 	const isNotMobile = useMediaQuery('(min-width: 770px)')
 	return (
-		<section className='about'>
+		<section
+			id='About'
+			className='about'
+		>
 			{isNotMobile && (
 				<div className='about__img'>
 					<Image

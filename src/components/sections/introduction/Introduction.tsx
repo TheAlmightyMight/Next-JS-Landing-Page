@@ -33,7 +33,10 @@ export const Introduction: React.FC = () => {
 	}
 
 	return (
-		<section className='introduction'>
+		<section
+			id='Home'
+			className='introduction'
+		>
 			<div className='introduction__wrapper'>
 				<Heading />
 				<Slider
