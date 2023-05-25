@@ -11,7 +11,14 @@ import { NavList } from './NavList'
 export const Header: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	return (
-		<header className='header'>
+		<header
+			style={{
+				backgroundColor: isOpen
+					? 'hsla(0, 0%, 100%, 1)'
+					: 'hsla(0, 0%, 100%, 0.8)',
+			}}
+			className='header'
+		>
 			<div className='header__wrapper'>
 				<TheBoxIcon />
 

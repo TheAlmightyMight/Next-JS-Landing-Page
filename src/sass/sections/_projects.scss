@@ -12,7 +12,7 @@ $tabValues: (
 .projects__wrapper {
 	margin: auto;
 	max-width: 1440px;
-	padding: 80px 110px 0 110px;
+	padding: 80px 110px 35px 110px;
 
 	display: flex;
 
@@ -23,6 +23,7 @@ $tabValues: (
 	@media (max-width: 690px) {
 		flex-direction: column;
 		align-items: center;
+		padding: 80px 0.5rem 0 0.5rem;
 
 		& > .projects__slider {
 			margin-left: 0;
@@ -90,12 +91,11 @@ $tabValues: (
 	display: grid;
 	grid-template-columns: repeat(2, 380px);
 	grid-template-rows: repeat(2, 384px);
-	grid-auto-rows: 384px;
 	gap: 32px;
 
 	@media (max-width: 1120px) {
 		grid-template-columns: minmax(300px, 1fr);
-		grid-auto-rows: 384px;
+		grid-template-rows: repeat(auto-fit, 384px) auto;
 	}
 
 	& .projects__slider-pagination {
@@ -140,7 +140,7 @@ $tabValues: (
 .projects__slider-pagination-item {
 	width: 1rem;
 	height: 1rem;
-	margin: 12px 1rem;
+	margin: 12px 8px;
 
 	background-color: $color-500;
 	border-radius: 50%;

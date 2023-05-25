@@ -14,7 +14,7 @@ export default function Home() {
 			<Reputation />
 			<About />
 			<Services />
-			<Experience />
+			{/* <Experience /> */}
 			<Consultation />
 			<Projects />
 			<ReachOut />
