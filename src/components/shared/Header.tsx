@@ -1,8 +1,8 @@
 'use client'
 import React, { useState } from 'react'
 
-import { TheBoxIcon } from '../icons/TheBox'
-import { BurgerIcon } from '../icons/BurgerIcon'
+import { TheBoxIcon } from '../icons/TheBoxIcon'
+import { BurgerIcon } from '../icons/BurgerIconLeft'
 import { CrossIcon } from '../icons/CrossIcon'
 
 import { MobileMenu } from './MobileMenu'

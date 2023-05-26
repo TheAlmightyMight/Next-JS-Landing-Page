@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { TheBoxIcon } from '../icons/TheBox'
-import { Twitter } from '../icons/Twitter'
+import { TheBoxIcon } from '../icons/TheBoxIcon'
+import { Twitter } from '../icons/TwitterIcon'
 import { FacebookIcon } from '../icons/FacebookIcon'
-import { LinkedIn } from '../icons/LinkedIn'
+import { LinkedIn } from '../icons/LinkedInIcon'
 
 export const Footer: React.FC = () => {
 	return (

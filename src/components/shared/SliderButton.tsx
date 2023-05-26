@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { ArrowLeftIcon } from '../icons/ArrowLeft'
-import { ArrowRightIcon } from '../icons/ArrowRight'
+import { ArrowRightIcon } from '../icons/ArrowRightIcon'
 
 interface Props {
 	type: 'left' | 'right'

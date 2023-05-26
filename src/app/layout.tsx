@@ -13,6 +13,10 @@ const font = Work_Sans({
 export const metadata: Metadata = {
 	title: 'The Box',
 	description: 'The Box building company',
+	applicationName: 'Next JS landing page',
+	authors: [
+		{ name: 'Klimenty Karavaev', url: 'https://github.com/TheAlmightyMight' },
+	],
 }
 
 export default function RootLayout({
