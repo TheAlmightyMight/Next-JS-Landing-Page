@@ -40,7 +40,6 @@ export const Experience: React.FC = () => {
 						icon={el.icon}
 						text={el.text}
 						number={el.number}
-						size={el.size}
 					/>
 				))}
 			</div>

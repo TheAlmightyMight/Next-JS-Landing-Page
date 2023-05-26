@@ -2,7 +2,6 @@
 const path = require('path')
 
 const nextConfig = {
-	reactStrictMode: false,
 	poweredByHeader: false,
 	sassOptions: {
 		includePaths: [path.join(__dirname, '/src/sass/')],
@@ -10,6 +9,7 @@ const nextConfig = {
 	images: {
 		formats: ['image/avif', 'image/webp'],
 	},
+	export: 'static',
 }
 
 module.exports = nextConfig
