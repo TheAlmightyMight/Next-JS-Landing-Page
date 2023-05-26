@@ -3,7 +3,6 @@ import React from 'react'
 import ImageData from '../../assets/other/illus2.png'
 import Image from 'next/image'
 
-// TODO: loader
 export const Illus2Icon: React.FC = () => {
 	return (
 		<Image

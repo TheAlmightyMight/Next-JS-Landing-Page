@@ -1,5 +1,6 @@
 @use '../base/typography' as *;
 @use '../base/variables' as *;
+
 .contacts__wrapper {
 	padding-block: 60px;
 	max-width: 1440px;
@@ -57,12 +58,6 @@
 		color: $color-300;
 		padding-left: 8px;
 	}
-
-	&:focus-visible {
-		border: 1px solid $color-300;
-		border-radius: 4px;
-		outline: none;
-	}
 }
 .contacts__form-text-area {
 	resize: none;
@@ -79,12 +74,6 @@
 	&::placeholder {
 		color: $color-300;
 		padding-left: 8px;
-	}
-
-	&:focus-visible {
-		border: 1px solid $color-300;
-		border-radius: 4px;
-		outline: none;
 	}
 }
 .contacts__btn {
