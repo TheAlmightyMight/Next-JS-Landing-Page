@@ -25,6 +25,7 @@
 	&__text {
 		@include body('default');
 		color: $color-100;
+		cursor: pointer;
 
 		margin-left: 10px;
 	}

@@ -1,35 +1,44 @@
 'use client'
-import React from 'react'
+import React, { useState, useRef } from 'react'
 
-import { usePrevState } from '@/hooks/usePrevState'
+import Image from 'next/image'
 
 import { Heading } from './Heading'
-import { Slider } from './Slider'
 import { SliderControls } from './SliderControls'
 
 import { SliderImages } from '@/constants'
 
 export const Introduction: React.FC = () => {
-	const [currentItem, setCurrentItem, getPrevState] = usePrevState<number>(0)
+	const [currentItem, setCurrentItem] = useState<number>(0)
+	const ref = useRef<HTMLImageElement>(null)
 
 	const goForward = () => {
-		if (currentItem + 1 === 12) {
-			return setCurrentItem(0)
+		if (ref.current) {
+			ref.current.classList.add('fade-out')
+			ref.current.addEventListener('animationend', e => {
+				//@ts-ignore
+				ref.current.classList.remove('fade-out')
+				if (currentItem + 1 === 12) {
+					return setCurrentItem(0)
+				}
+				setCurrentItem(prev => prev + 1)
+			})
 		}
-
-		setCurrentItem((prev: number) => prev + 1)
 	}
 
 	const goBackwards = () => {
-		if (currentItem - 1 === -1) {
-			return setCurrentItem(SliderImages.length - 1)
+		if (ref.current) {
+			ref.current.classList.add('fade-out')
+			ref.current.addEventListener('animationend', e => {
+				//@ts-ignore
+				ref.current.classList.remove('fade-out')
+				if (currentItem - 1 === -1) {
+					return setCurrentItem(SliderImages.length - 1)
+				}
+
+				setCurrentItem((prev: number) => prev - 1)
+			})
 		}
-
-		setCurrentItem((prev: number) => prev - 1)
-	}
-
-	const getPrevSrc = () => {
-		return SliderImages[getPrevState()].image.src
 	}
 
 	return (
@@ -39,9 +48,16 @@ export const Introduction: React.FC = () => {
 		>
 			<div className='introduction__wrapper'>
 				<Heading />
-				<Slider
-					prevSrc={getPrevSrc()}
-					{...SliderImages[currentItem]}
+				<Image
+					ref={ref}
+					className={'fade-in'}
+					blurDataURL={SliderImages[currentItem].image.blurDataURL}
+					placeholder='blur'
+					priority={true}
+					alt='Slider image'
+					fill={true}
+					src={SliderImages[currentItem].image.src}
+					key={SliderImages[currentItem].image.src}
 				/>
 				<SliderControls
 					nextHandler={goForward}
